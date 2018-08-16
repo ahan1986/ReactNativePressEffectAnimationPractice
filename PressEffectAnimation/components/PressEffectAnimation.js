@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, Animated } fro
 
 export default class App extends React.Component {
   state = {
-    animatePress: new Animated.Value(1)//Value 1 equates to 100% of the size from the start.
+    animatePress: new Animated.Value(1)//Value 1 equates to 100% of the size from the start. The initial value.
   }
   //method that shrinks the images
   animateIn() {
@@ -15,9 +15,9 @@ export default class App extends React.Component {
 
   animateOut() {
     Animated.timing(this.state.animatePress, {
-      toValue: 1,
-      duration: 100
-    }).start()
+      toValue: 1, // animate to final value of 1
+      duration: 100 // animate with duration of 100
+    }).start()//start the animation
   }
 
   render() {
