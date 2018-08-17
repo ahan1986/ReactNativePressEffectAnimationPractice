@@ -50,9 +50,10 @@ export default class PressEffectAnimation extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
   },
 });
+// if you change the height of the animated.view style and the width and not the child. the child will continue to be that same height and width
