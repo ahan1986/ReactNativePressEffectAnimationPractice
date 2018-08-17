@@ -6,8 +6,15 @@ export default class OverLapBadge extends React.Component {
         badgeScale: new Animated.Value(0),
         addedValue: 0
     }
+    // without this componentDidMount, in the beginning there will be no circle shown unless you click on add
+    componentDidMount() {
+        this.animatedBadge();
+    }
 
     animatedBadge () {
+        // must set the badgeScale back to zero so that it can continue to make effects everytime you click on the add button
+        this.state.badgeScale.setValue(0)
+
         Animated.timing(this.state.badgeScale, {
             toValue: 1,
             duration: 500
