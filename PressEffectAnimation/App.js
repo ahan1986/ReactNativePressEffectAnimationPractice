@@ -7,7 +7,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
+        {/* Clicking on the image will shrink it and expand back out when you let go of the screen */}
         <PressEffectAnimation imageofMe={require('./assets/images/111.jpg')} />
 
       </View>

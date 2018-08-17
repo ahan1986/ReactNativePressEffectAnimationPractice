@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, Animated } from 'react-native';
 
-export default class App extends React.Component {
+export default class PressEffectAnimation extends React.Component {
   state = {
     animatePress: new Animated.Value(1)//Value 1 equates to 100% of the size from the start. The initial value.
   }
