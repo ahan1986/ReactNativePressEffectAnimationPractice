@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, Animated } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableWithoutFeedback, Animated, Dimensions } from 'react-native';
+
+// importing Dimensions from react-native, you can get the dimensions of the window and call it in styles such as height: win.height
+const win = Dimensions.get('window');
 
 export default class PressEffectAnimation extends React.Component {
   state = {
@@ -29,14 +32,14 @@ export default class PressEffectAnimation extends React.Component {
           onPressOut={() => this.animateOut()}
         >
           <Animated.View style={{
-            width: 500, height: 500, backgroundColor: 'tomato',
+            width: 200, height: 200, backgroundColor: 'tomato',
             transform: [
               {
                 scale: this.state.animatePress
               }
             ]
           }} >
-            <Image style={{height: 500, width: 500}} source={this.props.imageofMe} />
+            <Image style={{height: 200, width: 200}} source={this.props.imageofMe} />
           </Animated.View>
         </TouchableWithoutFeedback>
 
@@ -50,6 +53,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 });
